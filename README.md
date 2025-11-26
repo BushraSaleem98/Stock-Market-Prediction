@@ -15,11 +15,44 @@ This project implements a Stacked LSTM (Long Short-Term Memory) neural network t
 ### Installation
 
 1. **Clone the repository**
-   ```bash
+
    git clone https://github.com/yourusername/stock-market-prediction.git
    cd stock-market-prediction
 
-   Install dependencies
+2. Install dependencies
 
-bash
-pip install pandas numpy matplotlib scikit-learn tensorflow
+   pip install pandas numpy matplotlib scikit-learn tensorflow
+
+3. Add your dataset
+
+   Place AAPL.csv in the project directory
+
+# Model Architecture
+   Stacked LSTM Network:
+
+   3 LSTM layers with 50 units each
+   Dropout regularization (20%)
+   Dense output layer for price prediction
+   Adam optimizer with MSE loss function
+
+#Training Parameters:
+   Time steps: 100 (uses 100 previous days)
+   Training split: 65% of data
+   Test split: 35% of data
+   Epochs: 100
+   Batch size: 64
+
+# Features
+   Data Preprocessing: Automatic scaling and sequence generation
+   Model Training: Stacked LSTM with validation monitoring
+   Visualization: Training history and prediction plots
+   Evaluation: RMSE and MAE metrics in dollars and percentages
+   Professional Output: Clear progress tracking and results
+
+# Output Metrics
+   The model provides comprehensive evaluation:
+   Root Mean Square Error (RMSE)
+   Mean Absolute Error (MAE)
+   Percentage errors relative to average price
+   Training vs validation performance
+   Prediction visualization charts
